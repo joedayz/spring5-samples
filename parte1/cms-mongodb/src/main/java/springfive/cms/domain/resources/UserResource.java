@@ -1,15 +1,9 @@
 package springfive.cms.domain.resources;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import springfive.cms.domain.models.User;
@@ -25,6 +19,7 @@ public class UserResource {
 
   private final UserService userService;
 
+  @Autowired
   public UserResource(UserService userService) {
     this.userService = userService;
   }
@@ -40,7 +35,7 @@ public class UserResource {
   }
 
   @PostMapping
-  public ResponseEntity<Mono<User>> newUser(UserRequest userRequest) {
+  public ResponseEntity<Mono<User>> newUser(@RequestBody UserRequest userRequest) {
     return new ResponseEntity<>(this.userService.create(userRequest), HttpStatus.CREATED);
   }
 

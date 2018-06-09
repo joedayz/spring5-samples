@@ -1,8 +1,8 @@
 twitter:
-  consumer-key: ${CONSUMER_KEY}
-  consumer-secret: ${CONSUMER_SECRET}
-  access-token: ${ACCESS_TOKEN}
-  access-token-secret: ${ACCESS_TOKEN_SECRET}
+  consumer-key: 4SK2ld8rBcWRrNN5dLpDec0hk
+  consumer-secret: EYrOhfWU8e6XEW24PWKPvkjRTgjQNKRlRqXmPwD2eIS0dP0kud
+  access-token: 233589200-VcXPGyx8D3ZzCj7fpgJf06cbqDETaHHC2LgSuU5s
+  access-token-secret: d6kB0cNVnAPwxVqNIYb9gmdQtBpT93hBNoMp6SEHgvprZ
 
 spring:
   rabbitmq:

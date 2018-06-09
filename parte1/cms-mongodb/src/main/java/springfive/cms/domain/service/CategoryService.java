@@ -1,5 +1,6 @@
 package springfive.cms.domain.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -15,6 +16,7 @@ public class CategoryService {
 
   private final CategoryRepository categoryRepository;
 
+  @Autowired
   public CategoryService(CategoryRepository categoryRepository) {
     this.categoryRepository = categoryRepository;
   }
